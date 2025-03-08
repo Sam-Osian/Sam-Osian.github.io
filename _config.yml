@@ -1,0 +1,36 @@
+title: "Sam Osian"
+description: "I'm Sam, a dedicated professional in Health Data Science and AI. On this blog, I share insights and personal reflections that bridge cutting-edge research with everyday application."
+author: "Sam Osian"
+theme: jekyll-theme-minimal
+
+# SEO
+url: "https://sam-osian.github.io" 
+baseurl: "" 
+permalink: pretty  # Removes .html from URLs
+
+github_username: "Sam-Osian"
+
+# Sitemap & Feeds (Useful for search engines)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Blog Settings
+paginate: 5  # Number of posts per page
+paginate_path: "/page:num/"
+future: false  # Avoids publishing future-dated posts
+timezone: "Europe/London"
+
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about"
+  - title: "Thoughts"
+    url: "/thoughts"
+  - title: "Projects"
+    url: "/projects"
+
+# Make URLs cleaner
+permalink: /:categories/:title/
