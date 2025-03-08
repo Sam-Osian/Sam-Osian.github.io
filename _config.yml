@@ -36,7 +36,7 @@ kramdown: # Table of contents
 
 # Site Author Information
 author:
-  avatar           : "profile.png"
+  #avatar           : "/assets/images/profile.png"
   name             : "Samuel Osian"
   bio              : "Health Data Science & AI"
   location         : "Liverpool, United Kingdom"

@@ -1,9 +1,12 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll"
-gem "jekyll-theme-minimal"
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
-gem "jekyll-sitemap"
-gem "jekyll-paginate"
-gem "webrick"  # Needed for Ubuntu
+group :jekyll_plugins do
+  gem 'jekyll'
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-redirect-from'
+  gem 'jemoji'
+  gem 'webrick', '~> 1.8'
+end
+
+gem 'github-pages'

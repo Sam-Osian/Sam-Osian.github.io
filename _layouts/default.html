@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-    <header>
-        <h1>{{ site.title }}</h1>
-        <nav>
-            <ul>
-                {% for item in site.navigation %}
-                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        {{ content }}
-    </main>
-    
-    <footer>
-        <p>© 2024 {{ site.author }}</p>
-    </footer>
-</body>
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
 </html>
