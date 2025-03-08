@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Home"
+title: ""
 ---
-# Welcome to My Blog  
+
+# Blog
 I'm Sam, and this is where I share thoughts on AI, data science, and research.
