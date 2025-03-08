@@ -1,12 +1,14 @@
-title: "Sam Osian"
-description: "I'm Sam, a dedicated professional in Health Data Science and AI. On this blog, I share insights and personal reflections that bridge cutting-edge research with everyday application."
-author: "Sam Osian"
-theme: jekyll-theme-minimal
-dark_mode: true
+# Basic site settings
+locale                   : "en-GB"
+site_theme               : "default"
+title                    : "Samuel Osian"
+title_separator          : "-"
+name                     : &name "Samuel Osian"
+description              : &description "I'm Sam, a dedicated professional in Health Data Science and AI. On this blog, I share insights and personal reflections that bridge cutting-edge research with everyday application."
+url                      : "https://sam-osian.github.io" 
+baseurl                  : "" 
+repository               : "Sam-Osian/sam-osian.github.io"
 
-# SEO
-url: "https://sam-osian.github.io" 
-baseurl: "" 
 
 github_username: "Sam-Osian"
 
@@ -31,20 +33,48 @@ kramdown: # Table of contents
   input: GFM
   syntax_highlighter: rouge
 
-# Example blog post in _posts/
-#---
-#title: "Exploring AI in Healthcare"
-#date: 2024-03-08
-#categories: [AI, Healthcare]
-#tags: [machine learning, ethics]
-#---
 
-# Example Python used in blog
-#```python
-#def hello():
-#    print("Hello, world!")
-#```
+# Site Author Information
+author:
+  avatar           : "profile.png"
+  name             : "Samuel Osian"
+  bio              : "Health Data Science & AI"
+  location         : "Liverpool, United Kingdom"
+  email            : "soandrews98@gmail.com"  
+  github           : "Sam-Osian"
+  linkedin         : "https://www.linkedin.com/in/sam-o-andrews/"
 
+
+# Academic Profiles
+author_profiles:
+  #googlescholar    : ""
+  orcid            : "https://orcid.org/0009-0000-7644-6218"
+  #researchgate     : ""
+  #pubmed           : ""
+
+# Social Media
+social:
+  links:
+    - "https://github.com/Sam-Osian"
+    - "https://www.linkedin.com/in/sam-o-andrews/"
+
+# SEO Settings
+favicon: "/favicon.ico"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-redirect-from
+  - jemoji
+
+# Permalinks
+permalink: /:categories/:title/
+
+# Navigation
 navigation:
   - title: "Home"
     url: "/"
@@ -55,15 +85,100 @@ navigation:
   - title: "Projects"
     url: "/projects/"
 
-# Make URLs cleaner
-permalink: /:categories/:title/
-
-social:
-  links:
-    - "https://github.com/Sam-Osian"
-
-favicon: "/favicon.ico"
-
-
 # Custom 404 Page
 permalink: /404.html
+
+# Markdown & Syntax Highlighting
+markdown: kramdown
+highlighter: rouge
+
+# Kramdown Configuration
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Comments 
+comments:
+  provider: false  # Change to "disqus" or "custom" if needed
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Output Settings
+incremental: false  # Disable incremental build (can cause issues)
+read_more: "disabled"  # No "Read More" links
+breadcrumbs: false  # No breadcrumbs
+words_per_minute: 160
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Conversion
+lsi: false
+excerpt_separator: "\n\n"
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed  # Compress CSS output
+
+# Mimic GitHub Pages Safe Mode
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
