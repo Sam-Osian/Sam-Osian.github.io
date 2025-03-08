@@ -62,5 +62,8 @@ social:
   links:
     - "https://github.com/Sam-Osian"
 
+favicon: "/favicon.ico"
+
+
 # Custom 404 Page
 permalink: /404.html
