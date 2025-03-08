@@ -61,3 +61,6 @@ permalink: /:categories/:title/
 social:
   links:
     - "https://github.com/Sam-Osian"
+
+# Custom 404 Page
+permalink: /404.html
