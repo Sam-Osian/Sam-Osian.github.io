@@ -2,11 +2,11 @@ title: "Sam Osian"
 description: "I'm Sam, a dedicated professional in Health Data Science and AI. On this blog, I share insights and personal reflections that bridge cutting-edge research with everyday application."
 author: "Sam Osian"
 theme: jekyll-theme-minimal
+dark_mode: true
 
 # SEO
 url: "https://sam-osian.github.io" 
 baseurl: "" 
-permalink: pretty  # Removes .html from URLs
 
 github_username: "Sam-Osian"
 
@@ -15,22 +15,49 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Blog Settings
 paginate: 5  # Number of posts per page
-paginate_path: "/page:num/"
+paginate_path: "/blog/page:num/"
 future: false  # Avoids publishing future-dated posts
 timezone: "Europe/London"
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
+kramdown: # Table of contents
+  toc_levels: 1..3
+  input: GFM
+  syntax_highlighter: rouge
+
+# Example blog post in _posts/
+#---
+#title: "Exploring AI in Healthcare"
+#date: 2024-03-08
+#categories: [AI, Healthcare]
+#tags: [machine learning, ethics]
+#---
+
+# Example Python used in blog
+#```python
+#def hello():
+#    print("Hello, world!")
+#```
 
 navigation:
   - title: "Home"
     url: "/"
   - title: "About"
-    url: "/about"
+    url: "/about/"
   - title: "Thoughts"
-    url: "/thoughts"
+    url: "/thoughts/"
   - title: "Projects"
-    url: "/projects"
+    url: "/projects/"
 
 # Make URLs cleaner
 permalink: /:categories/:title/
+
+social:
+  links:
+    - "https://github.com/Sam-Osian"
